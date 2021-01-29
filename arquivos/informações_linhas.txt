@@ -1,0 +1,156 @@
+PORANGABUÇU ---->>>>> PICI:
+   -Borges de Melo II(032): preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 15 min
+                       duração: 9 min
+                       
+   -Francisco Sá/Parangaba(080): preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 20 min
+                       duração: 8 min
+
+PICI ---->>>>> PORANGABUÇU:
+   -Borges de Melo I(031): preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 20 min
+                       duração: 12min
+                       
+   -Francisco Sá/Parangaba(080): preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 20 min
+                       duração: 10min
+                       
+PICI ---->>>>> BENFICA:
+   -Paupina/Pici(703): 
+                       preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 20 min
+                       duração: 12min
+                       
+   -Bezerra de Menezes/Washington Soares(855): 
+                       preço : 3.60
+                       primeiro horário: 06:00
+                       periodo:  a cada 20 min
+                       duração: 15min
+                       
+Benfica ---->>>>> PICI:
+   -Paupina/Pici(703): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 12min
+                       
+   -Jovita Feitosa/Shopping Benfica(389): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 11min
+                       
+   -Antônio Bezerra/Albert Sabin (088):  
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 34min
+
+   -Campus do PICI/Unifor(075):  
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 9min
+                       
+PICI ---->>>>> LABOMAR:
+   -Antônio Bezerra/Mucuripe(071): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 47min
+                       
+   -Conjunto Ceará/Aldeota/Papicu(076): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 41min
+
+LABOMAR ---->>>>> PICI:                       
+   -Conjunto Ceará/Aldeota/Papicu(076): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 35min
+                       
+LABOMAR ---->>>>> Benfica:                       
+   -Parangaba/Mucuripe(077): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 25min
+Benfica ---->>>>> Labomar:                       
+   -Parangaba/Mucuripe(077): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 27min
+    -Parangaba/Nautico(029): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 36min
+Benfica ---->>>>> Porangabuçu:                       
+   -Granja Lisboa/Goiabeiras(754): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 5min
+    -Conjunto Ceará/Centro(709): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 4min
+    -Conjunto Ceará/Centro/2ªEtapa(343): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 6min
+    -Conjunto Ceará/Centro/3ªEtapa(343): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 6min
+Porangabuçu ---->>>>> Benfica:                       
+   -Demócrito Rocha(308): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 5min
+    -Conjunto Ceará/Centro(709): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 5min
+    -Jardim Jatobá/Centro(387): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 6min
+    -Conjunto Ceará/Bonsucesso/Centro(710): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 6min
+Porangabuçu ---->>>>> Labomar:                       
+   -Parangaba/Mucuripe(77): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 32min
+    -Parangaba/Náutico(29): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 42min
+Labomar ---->>>>> Porangabuçu:                       
+   -Parangaba/Mucuripe(77): 
+                       preço : 3.60
+                       primeiro horário: 07:00
+                       periodo:  a cada 20 min
+                       duração: 32min
