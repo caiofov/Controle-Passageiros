@@ -1,56 +1,50 @@
+# Sistema de controle de passageiros durante a Pandemia COVID-19 
+
+Projeto desenvolvido em equipe como o trabalho final da disciplina de <a href="https://cc.ufc.br/curso/matriz-curricular/?cod=CK0211">Fundamentos de Programação</a> do curso de Ciência da Computação da Universidade Federal do Ceará.
+
+### Instruções:
 Dos aquivos aqui anexados, os únicos que devem ser utilizados pelo usuário são menu.py e relatorio.py, todos os demais
 são os códigos fonte do programa, e devem ser mantidos intocados.
 
-Abaixo segue uma breve documentação das atuais funcionalidades do programa:
+## Funcionalidades do programa:
 
+O programa consiste em funções relacionadas à reserva de assentos e cadastro de linhas e funções auxiliares.
 
+- ### insere_linha( nome_linha : str, origem : str, destino : str, primeiro_horario : int, periodo: int, duracao_da_viagem : int,passagem : float, quantidade_de_assentos : int):
 
-O programa, consistem em funções relacionadas à reserva de assentos e cadastro de linhas e funções auxiliares.
+Recebe as informações da linha a ser criada, nome, origem/destino, horário da primeira saída, de quanto em quanto tempo passa, quanto tempo dura a viagem,  preço da passagem e quantidade de assentos. Como a função altera o banco de dados de linhas, o propósito é que só seja utilizada por administradores.
 
-insere_linha(
-    nome_linha : str, origem : str, 
-    destino : str, primeiro_horario : int, 
-    periodo: int, duracao_da_viagem : int,
-    passagem : float, quantidade_de_assentos : int
-                ):
+- ### altera_linha(nome_linha : str, destino: str, parametro : str, novo_valor):
 
-Recebe as informações da linha a ser criada, nome, origem/destino, horário da primeira
-saída, de quanto em quanto tempo passa, quanto tempo dura a viagem,  preço da passagem e quantidade de assentos.
-Como a função altera o banco de dados de linhas, o propósito é que só seja utilizada por administradores.
-
-altera_linha(nome_linha : str, destino: str, parametro : str, novo_valor):
-
-Essa função altera dados de uma linha específica, diretamente no banco de dados. Assim, é uma
+Esta função altera dados de uma linha específica, diretamente no banco de dados. Assim, é uma
 função a ser utilizada por administradores ou por outras funções.
 
-
-checa_linha(destino : str)
+- ### checa_linha(destino : str)
 
 Com o input apenas do destino, essa função fornece ao usuário informações sobre as linhas
 disponiveis a um determinado destino, e desencadeia as funções responsáveis por realizar 
 as reservas.
 
 
->> assentos_disponiveis(linha : dict, data_partida : str, hora_partida : str) <<
+- ### assentos_disponiveis(linha : dict, data_partida : str, hora_partida : str)
 
-- Objetivo: Achar os assentos disponíveis de uma determinada linha em uma certa data e hora.
-- Parâmetros: Linha (para obter os assentos disponiveis), data e hora.
-- Retorno: Para obter os assentos disponíveis, basta chamar "assentos_disponiveis(linha,data,horario)[0]". Precisa do índice "[0]" pois ela retorna uma lista: o primeiro elemento é uma lista com os assentos disponiveis (que é o objetivo da função) e o segundo elemento é a variável "index" que será usada apenas pela função "reservar_assento".
+<b>Objetivo:</b> Achar os assentos disponíveis de uma determinada linha em uma certa data e hora.<br>
+<b>Parâmetros:</b> Linha (para obter os assentos disponiveis), data e hora.<br>
+<b>Retorno:</b> Para obter os assentos disponíveis, basta chamar "assentos_disponiveis(linha,data,horario)[0]". Precisa do índice "[0]" pois ela retorna uma lista: o primeiro elemento é uma lista com os assentos disponiveis (que é o objetivo da função) e o segundo elemento é a variável "index" que será usada apenas pela função "reservar_assento".
 
-> Passo a passo:
+#### Passo a passo:
 - Primeiro, adiciona todos os assentos da matriz padrão da linha na lista de disponiveis. Após isso, irá verificar se há reservas na linha para o horário e data recebido como parâmetro.
 - Se sim, irá remover todos os assentos na lista de reservado da lista de disponiveis.
 - Se não, irá adicionar um novo dicionário de reserva na lista de reservas da linha.
 - Então, efetuará o retorno.
 
 
->> linhas_disponiveis(lista_linhas : list) <<
+- ### linhas_disponiveis(lista_linhas : list)
+<b>Objetivo:</b> Achar as linhas disponíveis para um certo destino, ponto de partida, data e hora.<br>
+<b>Parâmetros:</b> Lista de linhas existentes para um certo destino (gerada pela função checa_linha)<br>
+<b>Retorno:</b> Não possui.
 
-- Objetivo: Achar as linhas disponíveis para um certo destino, ponto de partida, data e hora.
-- Parâmetros: Lista de linhas existentes para um certo destino (gerada pela função checa_linha)
-- Retorno: Não possui.
-
-> Passo a passo:
+#### Passo a passo:
 - Apesar de possuir apenas um parâmetro, irá pedir ao usuário o ponto de partida (usando a função "input_ponto"), data (utilizando a função "input_data") e horário (utilizando a função "input_horario") para a exibição das linhas disponíveis seguindo esses dados. Juntamente  ao nome de cada linha, irá exibir os assentos disponíveis em cada uma, usando a função "assentos_disponiveis".
 
 - Após cumprir seu objetivo, irá perguntar ao usuário se deseja reservar (o input será recebido pela função "pergunta_sim_ou_nao"). Caso positivo, irá pedir ao usuário a linha na qual deseja efetuar a reserva usando a função "input_linha".
@@ -58,23 +52,19 @@ as reservas.
 - Recebendo a linha, irá chamar a função "reservar_assento" para começar a reserva.
 
 
+- ### reservar_assento(linha : dict, data_partida : str, horario_partida : str, lista_linhas : list)
+<b>Objetivo:</b> Realizar a reserva de um assento.<br>
+<b>Parâmetros:</b> Linha, data, horario, lista_linhas (a que foi usada na função "linhas_disponiveis" e foi gerada pela função "checa_linha".<br>
+<b>Retorno:</b> Não possui.
 
-
->> reservar_assento(linha : dict, data_partida : str, horario_partida : str, lista_linhas : list) <<
-- Objetivo: Realizar a reserva de um assento.
-
-- Parâmetros: Linha, data, horario, lista_linhas (a que foi usada na função "linhas_disponiveis" e foi gerada pela função "checa_linha".
-
-- Retorno: Não possui.
-
-> Passo a passo:
+#### Passo a passo:
 - Chama a função "assentos_disponiveis" para receber a lista dos assentos disponiveis e a variável "index" que será usada no futuro. Irá exibir ao usuário a lista dos assentos e pedir o input de qual assento ele quer reservar, nesse momneto, poderá ocorrer falhas** na reserva, que serão todas registradas em um arquivo de texto.
 
-- Após o usuário escolher um assento e uma passagem válida, irá exibir uma mensagem de confirmação (o input será recebido pela função "pergunta_sim_ou_nao"):
+- Após o usuário escolher um assento e uma passagem válida, irá exibir uma mensagem de confirmação (o input será recebido pela função <b>"pergunta_sim_ou_nao"</b>):
  	
-	- Caso a resposta seja "nao", irá registrar mais uma falha** e irá perguntar se o usuário quer recomeçar (também com a função "pergunta_sim_ou_nao"). Se sim, irá novamente usar a função "pergunta_sim_ou_nao" para identificar se irá querer um novo destino para a nova reserva. Se sim, irá pedir o destino e chamar a função "checa_linha". Se não, irá chamar a função "linhas_disponiveis".
+	- Caso <b>negativo</b>, irá registrar mais uma falha** e irá perguntar se o usuário quer recomeçar (também com a função "pergunta_sim_ou_nao"). Se sim, irá novamente usar a função "pergunta_sim_ou_nao" para identificar se irá querer um novo destino para a nova reserva. Se sim, irá pedir o destino e chamar a função "checa_linha". Se não, irá chamar a função "linhas_disponiveis".
 	
-	- Caso positivo, irá identificar os assentos adjacentes seguindos as regras de distanciamento do COVID-19 e então fazer as alterações necessárias no arquivo de texto que armazena as linhas. Após isso, irá perguntar ao usuário se desea realizar uma nova reserva (novamente a função "pergunta_sim_ou_nao"). Caso a resposta seja "sim", irá seguir o mesmo procedimento dito anteriormente (perguntar se deseja alterar o destino e etc).
+	- Caso <b>positivo</b>, irá identificar os assentos adjacentes seguindos as regras de distanciamento do COVID-19 e então fazer as alterações necessárias no arquivo de texto que armazena as linhas. Após isso, irá perguntar ao usuário se desea realizar uma nova reserva (novamente a função "pergunta_sim_ou_nao"). Caso a resposta seja "sim", irá seguir o mesmo procedimento dito anteriormente (perguntar se deseja alterar o destino e etc).
 
 **FALHAS:
 1ª - Motivo: "Assento ocupado" -> assento existe na matriz padrão dos assentos mas não está na lista de disponíveis.
