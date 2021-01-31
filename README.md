@@ -66,106 +66,104 @@ as reservas.
 	
 	- Caso <b>positivo</b>, irá identificar os assentos adjacentes seguindos as regras de distanciamento do COVID-19 e então fazer as alterações necessárias no arquivo de texto que armazena as linhas. Após isso, irá perguntar ao usuário se desea realizar uma nova reserva (novamente a função "pergunta_sim_ou_nao"). Caso a resposta seja "sim", irá seguir o mesmo procedimento dito anteriormente (perguntar se deseja alterar o destino e etc).
 
-**FALHAS:
-1ª - Motivo: "Assento ocupado" -> assento existe na matriz padrão dos assentos mas não está na lista de disponíveis.
+#### FALHAS:
+<b>1ª - Motivo:</b> "Assento ocupado" -> assento existe na matriz padrão dos assentos mas não está na lista de disponíveis.<br>
 
-2ª - Motivo: "Assento inexistente" -> assento não existe na matriz padrão dos assentos.
+<b>2ª - Motivo:</b> "Assento inexistente" -> assento não existe na matriz padrão dos assentos.<br>
 
-3ª - Motivo: "Reserva nao confirmada" -> usuário não confirmou a efetuação da reserva.
+<b>3ª - Motivo:</b> "Reserva nao confirmada" -> usuário não confirmou a efetuação da reserva.
 
+- ### def quantas_meias_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens meias foram vendidas em uma linha escolhida em um mês.<br>
+<b>Parâmetros:</b> dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade de passagens meias vendidas.
 
+- ### def quantas_inteiras_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens inteiras foram vendidas em uma linha escolhida em um mês.<br>
+<b>Parâmetros:</b> dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade de passagens inteiras vendidas.
 
-def quantas_meias_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens meias foram vendidas em uma linha escolhida em um mês.
- - parâmetros: dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.
- - retorno: quantidade de passagens meias vendidas. 
+- ### def quantas_gratuitas_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens gratuitas foram vendidas em uma linha escolhida em um mês.<br>
+<b>Parâmetros:</b> dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade de passagens gratuitas vendidas. 
 
-def quantas_inteiras_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens inteiras foram vendidas em uma linha escolhida em um mês.
- - parâmetros: dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.
- - retorno: quantidade de passagens inteiras vendidas. 
+- ### def total_arrecadado(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular valor total arrecadados por uma linhas num mês específico.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> valor arrecadado por linha num mês
 
-def quantas_gratuitas_por_linha(dados = list, nome_da_linha = str, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens gratuitas foram vendidas em uma linha escolhida em um mês.
- - parâmetros: dados (arquivo de reservas feitas), nome da linha, mês escolhido e o ano.
- - retorno: quantidade de passagens gratuitas vendidas. 
+- ### def quantas_meias_mes(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens meias foram vendidas por todas as linhas em um mês.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade de passagens meias vendidas.
 
-def total_arrecadado(dados = list, mes_escolhido = int, ano = int):
- - objetivo: calcular valor total arrecadados por uma linhas num mês específico
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: valor arrecadado por linha num mês
+- ### def quantas_inteiras_mes(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens inteiras foram vendidas por todas as linhas em um mês.<br>
+ <b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade de passagens inteiras vendidas.
 
-def quantas_meias_mes(dados = list, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens meias foram vendidas por todas as linhas em um mês.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: quantidade de passagens meias vendidas.
+- ### def quantas_gratuitas_mes(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> calcular quantas passagens gratuitas foram vendidas por todas as linhas em um mês.<br>
+ <b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+ <b>Retorno:</b> quantidade de passagens gratuitas vendidas. 
 
-def quantas_inteiras_mes(dados = list, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens inteiras foram vendidas por todas as linhas em um mês.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: quantidade de passagens inteiras vendidas.
+- ### def total_de_passageiros(dados = list, mes_escolhido = int, ano = int):
+ - objetivo: Calcular a quantidade total de passageiros de todas as linhas num mês específico.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> quantidade total de passageiros
 
-def quantas_gratuitas_mes(dados = list, mes_escolhido = int, ano = int):
- - objetivo: calcular quantas passagens gratuitas foram vendidas por todas as linhas em um mês.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: quantidade de passagens gratuitas vendidas. 
+- ### def percentual_estudantes(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> Calcular o percentual de estudantes em todas as linhas num mês escolhido.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> percentual de estudantes.
 
-def total_de_passageiros(dados = list, mes_escolhido = int, ano = int):
- - objetivo: Calcular a quantidade total de passageiros de todas as linhas num mês específico.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: quantidade total de passageiros
+- ### def percentual_gratuidades(dados = list, mes_escolhido = int, ano = int):
+<b>Objetivo:</b> Calcular o percentual de gratuidades em todas as linhas num mês escolhido.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas), mês escolhido e o ano.<br>
+<b>Retorno:</b> percentual de gratuidades.
 
-def percentual_estudantes(dados = list, mes_escolhido = int, ano = int):
- - objetivo: Calcular o percentual de estudantes em todas as linhas num mês escolhido.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: percentual de estudantes.
+- ### def input_data_dia_semana(data_input):
+<b>Objetivo:</b> transformar uma data string num objeto datetime.<br>
+<b>Parâmetros:</b> data.<br>
+<b>Retorno:</b> data em datetime.
 
-def percentual_gratuidades(dados = list, mes_escolhido = int, ano = int):
- - objetivo: Calcular o percentual de gratuidades em todas as linhas num mês escolhido.
- - parâmetros: dados (arquivo de reservas feitas), mês escolhido e o ano.
- - retorno: percentual de gratuidades.
+- ### def ocupacao_media_semanal(dados):
+<b>Objetivo:</b> Calcular a ocupação média por linha em porcentagem entre dias da semana que houveram reservas.<br>
+<b>Parâmetros:</b>  dados (arquivo de reservas feitas).<br>
+<b>Retorno:</b> medias semanais de ocupação por linha em uma lista de dicionários. 
 
-def input_data_dia_semana(data_input):
- - objetivo: transformar uma data string num objeto datetime.
- - parâmetros: data.
- - retorno: data em datetime.
+- ### def gerar_matriz_ocupacao(medias_semanais = list):
+<b>Objetivo:</b> gerar a matriz com os dados oferecidos pela função "ocupacao_media_semanal".<br>
+<b>Parâmetros:</b> lista de médias de ocupação semanal.<br>
+<b>Retorno:</b> matriz de médias de ocupação semanal.
 
-def ocupacao_media_semanal(dados):
- - objetivo: Calcular a ocupação média por linha em porcentagem entre dias da semana que houveram reservas.
- - parâmetros: dados (arquivo de reservas feitas).
- - retorno: medias semanais de ocupação por linha em uma lista de dicionários. 
-
-def gerar_matriz_ocupacao(medias_semanais = list):
- - objetivo: gerar a matriz com os dados oferecidos pela função "ocupacao_media_semanal".
- - parâmetros: lista de médias de ocupação semanal.
- - retorno: matriz de médias de ocupação semanal.
-
-def exibir_matriz_ocupacao(matriz):
- - objetivo: printar cada linha da matriz em uma linha do terminal.
- - parâmetros: matriz gerada pela função "gerar_matriz_ocupacao".
- - retorno: não há
+- ### def exibir_matriz_ocupacao(matriz):
+<b>Objetivo:</b> printar cada linha da matriz em uma linha do terminal.<br>
+ <b>Parâmetros:</b> matriz gerada pela função "gerar_matriz_ocupacao".<br>
+ <b>Retorno:</b> não há
 
  
->> input_horario(str msg) << (função auxiliar do programa)
+- ### input_horario(str msg) << (função auxiliar do programa)
 
-- Objetivo: Perguntar ao usuário um horário no formato hh:mm e retornar um método time com esse horário.
-- Parâmetros: msg (para saber o que perguntar ao usuário quando for pedir o horário).
-- Retorno: um método time da biblioteca datetime.
+<b>Objetivo:</b> Perguntar ao usuário um horário no formato hh:mm e retornar um método time com esse horário.<br>
+<b>Parâmetros:</b> msg (para saber o que perguntar ao usuário quando for pedir o horário).<br>
+<b>Retorno:</b> um método time da biblioteca datetime.
 
- > Passo a passo:
+#### Passo a passo:
  - Pede o horário para o usuário e divide a resposta pelo ':' caso exista.
  - Tenta retornar um metodo time usando cada elemento respectivo da lista horário,
  se der erro, significa que o usuário deu um horário invalido, manda uma mensagem
  de erro e pede novamente por um horário, voltando para o início.
 
->> input_data(msg='Data: ', data_atual=datetime.now(), delta=15) << (função auxiliar do programa)
-- Objetivo: perguntar ao usuário por uma data no formato dd/mm/yyyy ou dd/mm ou dd e retornar
-um método datetime com essa data.
-- Parâmetros: msg (mensagem para perguntar ao usuário por uma data), data_atual (para obter o
-dia atual), delta (para saber o tempo máximo de agendamento).
-- Retorno: um método datetime da biblioteca datetime
+- ### input_data(msg='Data: ', data_atual=datetime.now(), delta=15) << (função auxiliar do programa)
+<b>Objetivo:</b> perguntar ao usuário por uma data no formato dd/mm/yyyy ou dd/mm ou dd e retornar
+um método datetime com essa data.<br>
+<b>Parâmetros:</b> msg (mensagem para perguntar ao usuário por uma data), data_atual (para obter o
+dia atual), delta (para saber o tempo máximo de agendamento).<br>
+<b>Retorno:</b> um método datetime da biblioteca datetime
 
- > Passo a passo:
+#### Passo a passo:
  - Pede uma data para o usuário e a divide pela '/' caso exista.
  - Tenta complementar com o mês atual ou o ano atual caso não tenham sido especificados.
  - Tenta transformar em datetime essa lista com as informações da data.
@@ -175,48 +173,48 @@ dia atual), delta (para saber o tempo máximo de agendamento).
  - Se passar por todas essas checagens e não der erro, retorna um método datetime com a data, se não,
  manda uma mensagem de erro, volta ao início do código e pede uma data novamente.
 
->> pergunta_sim_ou_nao(msg) << (função auxiliar do programa)
-- Objetivo: perguntar ao usuário uma pergunta de sim e nao e retornar qual foi a resposta se for válida.
-- Parâmetros: msg (Pergunta de sim ou não que será perguntada ao usuário)
-- Retorno: uma string 'sim' ou 'nao'
+- ### pergunta_sim_ou_nao(msg) << (função auxiliar do programa)
+<b>Objetivo:</b> perguntar ao usuário uma pergunta de sim e nao e retornar qual foi a resposta se for válida.<br>
+<b>Parâmetros:</b> msg (Pergunta de sim ou não que será perguntada ao usuário)<br>
+<b>Retorno:</b> uma string 'sim' ou 'nao'.
 
- > Passo a passo:
- - cria um tradutor que tem as strings que podem ser respondidas pelo usuário e as atribui a resposta esperada
- - pergunta ao usuário uma pergunta de sim ou não, se a resposta tiver no dicionário criado, retorna a atribuição
+#### Passo a passo:
+ - cria um tradutor que tem as strings que podem ser respondidas pelo usuário e as atribui a resposta esperada.
+ - pergunta ao usuário uma pergunta de sim ou não, se a resposta tiver no dicionário criado, retorna a atribuição.
  desta resposta ao dicionário, se não, responde uma mensagem de erro e recomeça o pedido de resposta.
 
->> remove_caracteres_especiais(palavra) << (função auxiliar do programa)
-- Objetivo: substituir os caracteres especiais pela forma normal em uma string.
-- Parâmetros: palavra (palavra que vai ser normalizada).
-- Retorno: uma string sem caracteres especiais
+- ### remove_caracteres_especiais(palavra) << (função auxiliar do programa)
+<b>Objetivo:</b> substituir os caracteres especiais pela forma normal em uma string.<br>
+<b>Parâmetros:</b> palavra (palavra que vai ser normalizada).<br>
+<b>Retorno:</b> uma string sem caracteres especiais
 
- > Passo a passo:
+#### Passo a passo:
  - retorna a função normalize da biblioteca unicodedata de forma a substituir os caracteres
 especiais como á por a e ç por c.
 
->> input_ponto(lista_linhas, msg='Ponto: ', msg_de_erro='Nenhum ponto encontrado.')
-- Objetivo: Perguntar ao usuário por um ponto de onibus e retornar esse ponto.
-- Parâmetros: lista_linhas (lista de dicionários com listas válidas), msg (mensagem para ser perguntada ao
-usuário), msg_de_erro (mensagem de erro caso seja inserido uma linha inválida)
-- Retorno: string com o nome do ponto
+- ### input_ponto(lista_linhas, msg='Ponto: ', msg_de_erro='Nenhum ponto encontrado.')
+<b>Objetivo:</b> Perguntar ao usuário por um ponto de onibus e retornar esse ponto.<br>
+<b>Parâmetros:</b> lista_linhas (lista de dicionários com listas válidas), msg (mensagem para ser perguntada ao
+usuário), msg_de_erro (mensagem de erro caso seja inserido uma linha inválida).<br>
+<b>Retorno:</b> string com o nome do ponto
 
- > Passo a passo:
+#### Passo a passo:
  - cria set e coloca a origem da linha no set.
  - cria lista com os pontos normalizados do set.
  - faz o print dos pontos disponíveis
  - pede o ponto para o usuário e normaliza ele
  - se o ponto tiver inscrito na string do ponto dado pelo usuário, ele retorna o ponto
 
->> input_linha(dicionario_linhas, msg='Linha: ', msg_erro='Linha não encontrada.'):
-- Objetivo: Perguntar ao usuário por uma linha de ônibus e retorna essa linha.
-- Parâmetros: dicionario_linhas (lista de dicionários de linhas), msg (mensagem que vai ser 
-perguntata ao usuário), msg_erro (mensagem dada caso seja dado uma linha inválida)
-- Retorno: o dicionário da linha escolhida
+- ### input_linha(dicionario_linhas, msg='Linha: ', msg_erro='Linha não encontrada.'):
+<b>Objetivo:</b> Perguntar ao usuário por uma linha de ônibus e retorna essa linha.<br>
+<b>Parâmetros:</b> dicionario_linhas (lista de dicionários de linhas), msg (mensagem que vai ser 
+perguntata ao usuário), msg_erro (mensagem dada caso seja dado uma linha inválida).<br>
+<b>Retorno:</b> o dicionário da linha escolhida
 
- > Passo a passo:
+#### Passo a passo:
  - Pergunta ao usuário por uma linha.
- - itera pela lista de linhas de normaliza o nome da linha do dicionário atual
- - divide o nome da linha em nome e número
+ - itera pela lista de linhas de normaliza o nome da linha do dicionário atual.
+ - divide o nome da linha em nome e número.
  - checa se a resposta é igual ao nome inteiro da linha, ou ao número da linha ou aos pontos da linha,
  se sim, retorna o dicionário dessa linha, se não, manda mensagem de erro e recomeça o código.
 
