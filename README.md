@@ -2,6 +2,8 @@
 
 Projeto desenvolvido em equipe como o trabalho final da disciplina de <a href="https://cc.ufc.br/curso/matriz-curricular/?cod=CK0211">Fundamentos de Programação</a> do curso de Ciência da Computação da Universidade Federal do Ceará.
 
+> <b>Equipe:</b> <a href="https://github.com/caiofov">Caio Oliveira</a>, <a href="">João Pedro de Almeida</a>, <a href="https://github.com/PauloFRC">Paulo Rodrigues</a> e <a href="">Pedro Amaral</a>
+
 ### Instruções:
 Dos aquivos aqui anexados, os únicos que devem ser utilizados pelo usuário são:<br><br>
 <b>"instrucoes.pdf":</b> Todas as regras e conteúdos solicitados pela docente da disciplina.<br>
